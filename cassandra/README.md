@@ -1,9 +1,9 @@
-# Cassandra相关的代码
+# Cassandra related code
 
 ## data-storage.py
-实现了一个Cassandra数据存储过程
+Implemented Cassandra data store and get process
 
-### 代码依赖
+### dependency
 cassandra-driver    https://github.com/datastax/python-driver
 
 cql
@@ -12,10 +12,10 @@ cql
 pip install -r requirements.txt
 ```
 
-### 运行代码
-假如你的Cassandra运行在一个叫做bigdata的docker-machine里面, 然后虚拟机的ip是192.168.99.100
+### running
+assuming you are running Cassandra in a docker-machine called bigdata, the virtual ip is 192.168.99.100
 
-利用cqlsh客户端创建一个keyspace和table
+use cqlsh client to create a keyspace and table
 ```sh
 CREATE KEYSPACE "stock" WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1} AND durable_writes = 'true';
 USE stock;
