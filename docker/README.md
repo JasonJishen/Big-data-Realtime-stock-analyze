@@ -1,20 +1,20 @@
-# Docker环境配置相关脚本
+# Docker environment setup
 
-## 代码结构
+## code structure
 
-1. local-setup.sh 快速部署单节点Kakfa, Cassandra, Zookeeper开发环境
+1. local-setup.sh fast deploy single node Kakfa, Cassandra, Zookeeper environment
 
-## MacOS, *nix系统
+## MacOS, *nix
 
-1. 创建一个docker-machine虚拟机, 2个CPU, 2G的内存
+1. create a docker-machine virtual machine, 2CPU, 2G memorty
 ```sh
 docker-machine create --driver virtualbox --virtualbox-cpu-count 2 --virtualbox-memory 2048 bigdata
 ```
-2. 运行脚本来启动所有相关的docker容器 (Kafka, Cassandra, Zookeeper)
+2. run script to run all the related docker container (Kafka, Cassandra, Zookeeper)
 ```sh
 ./local-setup.sh bigdata
 ```
 
-## Windows系统
+## Windows
 
 TODO
