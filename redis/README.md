@@ -1,9 +1,8 @@
-# Redis相关的代码
+# Redis related code
 
 ## redis-producer.py
-Redis producer, 从一个Kafka topic接收到消息后publish到redis PUB
-
-### 代码依赖
+Redis producer, fetching from Kafka topic then publish to redis PUB
+### dependency
 kafka-python    https://github.com/dpkp/kafka-python
 
 redis           https://pypi.python.org/pypi/redis
@@ -12,8 +11,8 @@ redis           https://pypi.python.org/pypi/redis
 pip install -r requirements.txt
 ```
 
-### 运行代码
-假如你的Kafka和Redis运行在一个叫做bigdata的docker-machine里面, 然后虚拟机的ip是192.168.99.100
+### running
+assuming your Kafka redis running in a docker-machine called bigdata, and assuming the virtual machine ip is 192.168.99.100
 ```sh
 python redis-publisher.py average-stock-price 192.168.99.100:9092 average-stock-price 192.168.99.100 6379
 ```
