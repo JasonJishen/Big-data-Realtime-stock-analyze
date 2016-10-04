@@ -1,9 +1,9 @@
-# Kafka相关的代码
+# Kafka related code
 
 ## simple-data-producer.py
-实现了一个kafka producer, 每秒钟从Yahoo finance抓取一支股票的信息, 发送给Kafka
+implemented a kafka producer,fetching one piece of stock information from Yahoo finance, send to Kafka
 
-### 代码依赖
+### dependency
 googlefinance   https://pypi.python.org/pypi/googlefinance
 
 kafka-python    https://github.com/dpkp/kafka-python
@@ -14,22 +14,21 @@ schedule        https://pypi.python.org/pypi/schedule
 pip install -r requirements.txt
 ```
 
-### 运行代码
-假如你的Kafka运行在一个叫做bigdata的docker-machine里面, 然后虚拟机的ip是192.168.99.100
+### running
+assuming a Kafka running in a docker-machine called bigdata,assuming virtual machine ip is 192.168.99.100
 ```sh
 python simple-data-producer.py AAPL stock-analyzer 192.168.99.100:9092
 ```
 
 
 ## fast-data-producer.py
-实现了一个kafka producer, 产生随机的股票价格, 发送给Kafka
-由于会产生大量的数据, 请注意一定要设置隔离的开发环境
-
-### 代码依赖
+implemented a kafka producer, generating random stock price, send to Kafka
+there will be a lot of data generated, please isolate your development environment.
+### dependency
 confluent-kafka https://github.com/confluentinc/confluent-kafka-python
 
-### 运行代码
-假如你的Kafka运行在一个叫做bigdata的docker-machine里面, 然后虚拟机的ip是192.168.99.100
+### running
+assumging you have a Kafka running in a bigdata docker-machine, and assuming the virtual ip is 192.168.99.100
 ```sh
 python fast-data-producer.py stock-analyzer 192.168.99.100:9092
 ```
