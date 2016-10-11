@@ -1,4 +1,4 @@
-#a full-stack real time stock analyzer web app
+#A full-stack real time stock analyzer web app
 
 Techniques used:
 Apache Zookeeper,
@@ -15,3 +15,12 @@ for this project, I developed a big data platform to process stock data in real 
 
 ##Setup on your local machine
 
+#####Step 1.open up folder Docker to set up the environment 
+#####Step 2.Follow instructions in seperate foders including Redis Cassandra Kafka Spark to add required dependencies
+#####Step 3.Start the virtual machine named as "bigdata" you created in step1 
+#####Step 4.Run the .py following the instructions in the accordingly folder
+      4.1 kafka/simple.producer.py comsume data
+      4.2 cassandra/data.storage.py  store data
+      4.3 spark/stream-processing.py fetch and process data from kafka then write it back
+      4.4 redis/redis-publisher.py work as message queue between kakfa and sprak, publish processed data
+      4.5 nodejs/index.js start the website server in order to visualize the dashboard
