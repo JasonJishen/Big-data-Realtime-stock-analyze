@@ -1,4 +1,4 @@
-a full-stack real time stock analyzer web app
+#a full-stack real time stock analyzer web app
 
 Techniques used:
 Apache Zookeeper,
