@@ -6,23 +6,23 @@
 
 ## MacOS, *nix
 
-1. create a docker-machine virtual machine, 2CPU, 2G memorty
+create a docker-machine virtual machine, 2CPU, 2G memorty
 ```sh
 docker-machine create --driver virtualbox --virtualbox-cpu-count 2 --virtualbox-memory 2048 bigdata
 ```
-2. run script to run all the related docker container (Kafka, Cassandra, Zookeeper)
+run script to run all the related docker container (Kafka, Cassandra, Zookeeper)
 ```sh
 ./local-setup.sh bigdata
 ```
 
 ## Windows
 
-1. create a docker-machine virtual machine, 2CPU, 2G memorty
+create a docker-machine virtual machine, 2CPU, 2G memorty
 ```sh
 docker-machine create --driver virtualbox --virtualbox-cpu-count 2 --virtualbox-memory 2048 bigdata
 ```
 
-2. Start Zookeeper Server
+2.Start Zookeeper Server
 ```sh
 docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name zookeeper confluent/zookeeper 
 ```
